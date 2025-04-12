@@ -40,6 +40,12 @@ h2 {
     max-width: 900px;
     margin: auto;
     padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.app.dark .container {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
 }
 
 .card {
@@ -47,6 +53,11 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app.dark .card {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
 }
 
 .link {
@@ -174,11 +185,25 @@ li span {
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e0e0e0; /* Jasny szary */
+    color: #000; /* Czarny tekst */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.app.dark .button {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
+}
+
+.button:hover {
+    background-color: #d6d6d6; /* Delikatnie ciemniejszy szary */
 }
 
 .save-button {
@@ -200,9 +225,6 @@ li span {
 .reset-button:hover {
     background-color: #c53030;
 }
-
-
-
 
 .reviews-container {
     display: flex;
@@ -230,6 +252,11 @@ footer.footer {
     border-radius: 12px;
 }
 
+.app.dark footer.footer {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
+}
+
 footer.footer h3 {
     color: #333; /* Ciemny szary dla nagłówka */
     margin-bottom: 20px;
@@ -243,24 +270,8 @@ footer.footer .reviews-container {
     height: 20px;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #e0e0e0; /* Jasny szary */
-    color: #000; /* Czarny tekst */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.button:hover {
-    background-color: #d6d6d6; /* Delikatnie ciemniejszy szary */
-}
-
 .grid {
     display: grid;
     gap: 20px;
 }
+
