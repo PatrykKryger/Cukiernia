@@ -14,7 +14,7 @@ const cakeData = [
 ];
 
 const Cakes = () => {
-    const { addToCart, t } = useContext(AppContext);
+    const { addToCart, t, isLoggedIn, showLoginPopup } = useContext(AppContext);
 
     return (
         <div className="container">
@@ -26,7 +26,19 @@ const Cakes = () => {
                             <img src={cake.image} alt={cake.name} className="cake-image" />
                             <div>
                                 <span className="block font-bold text-lg">{cake.name}</span>
-                                <button className="btn" onClick={() => addToCart(cake)}>{t("addToCart")}</button>
+                                <button 
+                                    className={`btn ${!isLoggedIn ? "pointer-events-none opacity-50" : ""}`} 
+                                    onClick={() => {
+                                        if (isLoggedIn) {
+                                            addToCart(cake);
+                                        } else {
+                                            showLoginPopup(); // Wyświetl popup
+                                        }
+                                    }}
+                                    disabled={!isLoggedIn}
+                                >
+                                    {t("addToCart")}
+                                </button>
                             </div>
                         </li>
                     ))}
@@ -38,3 +50,4 @@ const Cakes = () => {
 };
 
 export default Cakes;
+

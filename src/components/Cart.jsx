@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import './styles/global.css';
 
 const Cart = () => {
-    const { cart, removeFromCart, t } = useContext(AppContext);
+    const { cart, removeFromCart, t, isLoggedIn, showLoginPopup } = useContext(AppContext);
 
     return (
         <div className="container">
@@ -19,8 +19,16 @@ const Cart = () => {
                         </li>
                     ))}
                 </ul>
-                <Link to="/payment" className={`link mt-3 text-center block ${cart.length === 0 ? "pointer-events-none opacity-50" : ""}`}>
-                    <button className="bg-blue-500 text-white rounded mt-5" disabled={cart.length === 0}>
+                <Link to={isLoggedIn ? "/payment" : "#"} className={`link mt-3 text-center block ${cart.length === 0 ? "pointer-events-none opacity-50" : ""}`}>
+                    <button 
+                        className="bg-blue-500 text-white rounded mt-5" 
+                        disabled={cart.length === 0} 
+                        onClick={() => {
+                            if (!isLoggedIn) {
+                                showLoginPopup();
+                            }
+                        }}
+                    >
                         {t("checkout")}
                     </button>
                 </Link>

@@ -1,17 +1,35 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import './styles/global.css';
 
-const Register = () => (
-    <div className="container">
+const Register = () => {
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [success, setSuccess] = useState(false);
+
+    const handleRegister = () => {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const newUser = { username, password };
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
+        setSuccess(true);
+    };
+
+    return (
+        <div className="container">
             <div className="card text-center">
-                    <h2>Register</h2>
-                    <input type="text" placeholder="Username" className="border mb-3" />
-                    <input type="email" placeholder="Email" className="border mb-3" />
-                    <input type="password" placeholder="Password" className="border mb-3" />
-                    <Link to="/cakes" className="link mt-3 block"><button className="bg-blue-500 text-white rounded mt-3">Register</button></Link>
-                    <Link to="/login" className="link mt-3 block">Already have an account? Login</Link>
+                <h2>Register</h2>
+                <input type="text" placeholder="Username" className="border mb-3" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input type="email" placeholder="Email" className="border mb-3" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="password" placeholder="Password" className="border mb-3" value={password} onChange={(e) => setPassword(e.target.value)} />
+                {success && <p className="text-green-500">Registration successful!</p>}
+                <button className="bg-blue-500 text-white rounded mt-3" onClick={handleRegister}>Register</button>
+                <Link to="/login" className="link mt-3 block">Already have an account? Login</Link>
             </div>
-    </div>
-);
+        </div>
+    );
+};
 
 export default Register;
+
