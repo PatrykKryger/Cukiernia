@@ -1,0 +1,266 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+li button {
+    background-color: #e53e3e;
+    color: white;
+}
+
+li button:hover {
+    background-color: #c53030;
+}
+
+li span {
+    font-size: 1.2rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-5 {
+    margin-top: 1.5rem;
+}
+
+.mt-6 {
+    margin-top: 2rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.cake-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 130px;
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.options label {
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.settings-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-button {
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.reset-button {
+    background-color: #e53e3e;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #c53030;
+}
+
+
+
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444; /* Neutralny szary */
+    margin-bottom: 10px;
+}
+
+.card-content {
+    font-size: 1rem;
+    color: #666; /* Trochę jaśniejszy szary */
+    line-height: 1.5;
+}
+
+footer.footer {
+    background-color: #f1f1f1; /* Neutralne, bardzo jasne tło */
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+footer.footer h3 {
+    color: #333; /* Ciemny szary dla nagłówka */
+    margin-bottom: 20px;
+}
+
+footer.footer .reviews-container {
+    justify-content: center;
+}
+
+.przerwa {
+    height: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e0e0e0; /* Jasny szary */
+    color: #000; /* Czarny tekst */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #d6d6d6; /* Delikatnie ciemniejszy szary */
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
