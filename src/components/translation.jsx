@@ -1,0 +1,52 @@
+const translations = {
+    pl: {
+        login: "Zaloguj się",
+        createCake: "Stwórz ciasto",
+        cakes: "Ciasta",
+        cart: "Koszyk",
+        settings: "Ustawienia",
+        yourCart: "Twój koszyk",
+        remove: "Usuń",
+        checkout: "Przejdź do płatności",
+        backToCakes: "Wróć do ciast",
+        appTheme: "Motyw aplikacji",
+        light: "Jasny",
+        dark: "Ciemny",
+        appLanguage: "Język aplikacji",
+        polish: "Polski",
+        english: "Angielski",
+        save: "Zapisz",
+        reset: "Resetuj",
+        addToCart: "Dodaj do koszyka",
+        goToCart: "Przejdź do koszyka",
+        username: "Nazwa użytkownika",
+        password: "Hasło",
+        register: "Zarejestruj się"
+    },
+    en: {
+        login: "Login",
+        createCake: "Create Cake",
+        cakes: "Cakes",
+        cart: "Cart",
+        settings: "Settings",
+        yourCart: "Your Cart",
+        remove: "Remove",
+        checkout: "Checkout",
+        backToCakes: "Back to Cakes",
+        appTheme: "App Theme",
+        light: "Light",
+        dark: "Dark",
+        appLanguage: "App Language",
+        polish: "Polish",
+        english: "English",
+        save: "Save",
+        reset: "Reset",
+        addToCart: "Add to Cart",
+        goToCart: "Go to Cart",
+        username: "Username",
+        password: "Password",
+        register: "Register"
+    }
+};
+
+export default translations;

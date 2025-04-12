@@ -14,24 +14,24 @@ const cakeData = [
 ];
 
 const Cakes = () => {
-    const { addToCart } = useContext(AppContext);
+    const { addToCart, t } = useContext(AppContext);
 
     return (
         <div className="container">
             <div className="card">
-                <h2>Cakes</h2>
+                <h2>{t("cakes")}</h2>
                 <ul>
                     {cakeData.map((cake, index) => (
                         <li key={index} className="cake-item flex items-center gap-4 mb-4">
                             <img src={cake.image} alt={cake.name} className="cake-image" />
                             <div>
                                 <span className="block font-bold text-lg">{cake.name}</span>
-                                <button className="btn" onClick={() => addToCart(cake)}>Add to Cart</button>
+                                <button className="btn" onClick={() => addToCart(cake)}>{t("addToCart")}</button>
                             </div>
                         </li>
                     ))}
                 </ul>
-                <Link to="/cart" className="link mt-5 block text-center">Go to Cart</Link>
+                <Link to="/cart" className="link mt-5 block text-center">{t("goToCart")}</Link>
             </div>
         </div>
     );

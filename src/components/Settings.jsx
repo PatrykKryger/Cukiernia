@@ -1,62 +1,73 @@
+import React, { useContext, useState } from "react";
+import { AppContext } from "../App";
 import './styles/global.css';
 
 const Settings = () => {
+    const { setTheme, setLanguage, theme, language, t } = useContext(AppContext);
+    const [selectedTheme, setSelectedTheme] = useState(theme);
+    const [selectedLanguage, setSelectedLanguage] = useState(language);
+
+    const handleSave = () => {
+        setTheme(selectedTheme);
+        setLanguage(selectedLanguage);
+    };
+
+    const handleReset = () => {
+        setTheme("light");
+        setLanguage("pl");
+        setSelectedTheme("light");
+        setSelectedLanguage("pl");
+    };
+
     return (
         <div className="container">
             <div className="card">
-                <h1 className="settings-title">Ustawienia</h1>
+                <h1 className="settings-title">{t("settings")}</h1>
 
                 <section className="settings-section">
-                    <h2 className="section-title">Motyw aplikacji</h2>
+                    <h2 className="section-title">{t("appTheme")}</h2>
                     <div className="options">
                         <label>
-                            <input type="radio" name="theme" value="light" />
-                            Jasny
+                            <input
+                                type="radio"
+                                name="theme"
+                                value="light"
+                                checked={selectedTheme === "light"}
+                                onChange={() => setSelectedTheme("light")}
+                            />
+                            {t("light")}
                         </label>
                         <label>
-                            <input type="radio" name="theme" value="dark" />
-                            Ciemny
-                        </label>
-                        <label>
-                            <input type="radio" name="theme" value="system" />
-                            Systemowy
+                            <input
+                                type="radio"
+                                name="theme"
+                                value="dark"
+                                checked={selectedTheme === "dark"}
+                                onChange={() => setSelectedTheme("dark")}
+                            />
+                            {t("dark")}
                         </label>
                     </div>
                 </section>
 
                 <section className="settings-section">
-                    <h2 className="section-title">Powiadomienia</h2>
+                    <h2 className="section-title">{t("appLanguage")}</h2>
                     <div className="options">
-                        <label>
-                            <input type="checkbox" name="emailNotifications" />
-                            Powiadomienia e-mail
-                        </label>
-                        <label>
-                            <input type="checkbox" name="smsNotifications" />
-                            Powiadomienia SMS
-                        </label>
-                        <label>
-                            <input type="checkbox" name="pushNotifications" />
-                            Powiadomienia Push
-                        </label>
-                    </div>
-                </section>
-
-                <section className="settings-section">
-                    <h2 className="section-title">Język aplikacji</h2>
-                    <div className="options">
-                        <select name="language" className="dropdown">
-                            <option value="pl">Polski</option>
-                            <option value="en">Angielski</option>
-                            <option value="de">Niemiecki</option>
-                            <option value="fr">Francuski</option>
+                        <select
+                            name="language"
+                            className="dropdown"
+                            value={selectedLanguage}
+                            onChange={(e) => setSelectedLanguage(e.target.value)}
+                        >
+                            <option value="pl">{t("polish")}</option>
+                            <option value="en">{t("english")}</option>
                         </select>
                     </div>
                 </section>
 
                 <div className="settings-actions">
-                    <button className="button save-button">Zapisz</button>
-                    <button className="button reset-button">Resetuj</button>
+                    <button className="button save-button" onClick={handleSave}>{t("save")}</button>
+                    <button className="button reset-button" onClick={handleReset}>{t("reset")}</button>
                 </div>
             </div>
         </div>
