@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import './styles/global.css';
 
 const Cart = () => {
-    const { cart, removeFromCart, t } = useContext(AppContext); // Dodano t
+    const { cart, removeFromCart, t } = useContext(AppContext);
 
     return (
         <div className="container">
@@ -19,8 +19,10 @@ const Cart = () => {
                         </li>
                     ))}
                 </ul>
-                <Link to="/payment" className="link mt-3 text-center block">
-                    <button className="bg-blue-500 text-white rounded mt-5">{t("checkout")}</button>
+                <Link to="/payment" className={`link mt-3 text-center block ${cart.length === 0 ? "pointer-events-none opacity-50" : ""}`}>
+                    <button className="bg-blue-500 text-white rounded mt-5" disabled={cart.length === 0}>
+                        {t("checkout")}
+                    </button>
                 </Link>
                 <Link to="/cakes" className="link mt-3 text-center block">{t("backToCakes")}</Link>
             </div>
