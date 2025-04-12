@@ -12,6 +12,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.app.dark .navbar {
+    background-color: black; /* Zmieniono na czarny */
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
@@ -19,6 +23,10 @@
     padding: 8px 16px;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark .nav-link {
+    color: white; /* Zmieniono na biały */
 }
 
 .nav-link:hover {
@@ -38,6 +46,25 @@
 }
 
 .app.dark {
-    background-color: #333;
-    color: white;
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
+}
+
+.card {
+    background-color: #fff;
+}
+
+.app.dark .card {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
+}
+
+.button {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.app.dark .button {
+    background-color: black; /* Zmieniono na czarny */
+    color: white; /* Zmieniono na biały */
 }
