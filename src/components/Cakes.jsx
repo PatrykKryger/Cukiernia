@@ -32,6 +32,7 @@ const Cakes = () => {
                                         if (isLoggedIn) {
                                             addToCart(cake);
                                         } else {
+                                            alert("Nie można dodać ciasta bez zalogowania"); // Wyświetl alert
                                             showLoginPopup(); // Wyświetl popup
                                         }
                                     }}
@@ -50,4 +51,3 @@ const Cakes = () => {
 };
 
 export default Cakes;
-
