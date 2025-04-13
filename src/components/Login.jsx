@@ -10,13 +10,13 @@ const Login = () => {
     const [error, setError] = useState("");
 
     const handleLogin = () => {
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        const userExists = users.some(user => user.username === username && user.password === password);
+        const users = JSON.parse(localStorage.getItem("users")) || []; // Pobierz użytkowników z localStorage
+        const userExists = users.some(user => user.username === username && user.password === password); // Sprawdź, czy użytkownik istnieje
 
         if (userExists) {
-            login();
+            login(); // Zaloguj użytkownika
         } else {
-            setError(t("invalidCredentials"));
+            setError(t("Błędne dane!!!")); // Wyświetl błąd
         }
     };
 
@@ -35,4 +35,3 @@ const Login = () => {
 };
 
 export default Login;
-
