@@ -49,7 +49,7 @@ const App = () => {
                             <Link to="/main"><img src={Logo} alt="logo" className="logo" /></Link>
                             <Link to="/login" className="nav-link">{t("login")}</Link>
                             <Link to="/create-cake" className={`nav-link ${!isLoggedIn ? "pointer-events-none opacity-50" : ""}`}>{t("createCake")}</Link>
-                            <Link to="/cakes" className="nav-link">{t("cakes")}</Link>
+                            <Link to="/cakes" className="nav-link ">{t("cakes")}</Link>
                             <Link to="/cart" className="nav-link">{t("cart")}</Link>
                             <Link to="/ustawienia" className="nav-link">{t("settings")}</Link>
                             {isLoggedIn && (
