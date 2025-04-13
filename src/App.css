@@ -1,7 +1,10 @@
 .container {
     padding: 20px;
 }
-
+.container.card text-center{
+    text-align: center;
+    margin-right: 50px;
+}
 .navbar {
     display: flex;
     justify-content: center;

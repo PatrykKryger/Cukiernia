@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../App";
 import './styles/global.css';
 
 const reviews = [
@@ -10,6 +12,8 @@ const reviews = [
 ];
 
 const Main = () => {
+    const { t } = useContext(AppContext); // pobieramy funkcję tłumaczenia
+
     const randomReviews = reviews.slice(0, 2);
     const footerReviews = reviews.slice(2, 5);
 
@@ -17,16 +21,15 @@ const Main = () => {
         <div className="container">
             <div className="card">
                 <header className="section text-center">
-                    <h1 className="text-4xl font-bold">Witamy w naszej Cukierni!</h1>
+                    <h1 className="text-4xl font-bold">{t("welcomeTitle")}</h1>
                     <p className="mt-4 text-lg text-gray-700">
-                        Nasza cukiernia to miejsce, gdzie pasja do pieczenia łączy się z
-                        najlepszymi składnikami. Każdy wypiek to wyjątkowa historia smaku!
+                        {t("welcomeDesc")}
                     </p>
                 </header>
 
                 <section className="section flex flex-col justify-center items-center">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-                        Opinie naszych klientów
+                        {t("customerReviews")}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {randomReviews.map((review, index) => (
@@ -40,14 +43,14 @@ const Main = () => {
                 <div className="przerwa">
                     <div className="mt-8">
                         <Link to="/cakes" className="button">
-                            Zobacz Nasze Wypieki
+                            {t("seeOurCakes")}
                         </Link>
                     </div>
                 </div>
                 <div className="przerwa"></div>
                 <footer className="footer w-full">
                     <h3 className="text-lg font-semibold mb-4 text-center">
-                        Co mówią o nas klienci?
+                        {t("footerCustomerReviews")}
                     </h3>
                     <div className="reviews-container">
                         {footerReviews.map((review, index) => (

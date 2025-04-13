@@ -11,6 +11,7 @@ const Cart = () => {
         <div className="container">
             <div className="card">
                 <h2>{t("yourCart")}</h2>
+
                 <ul>
                     {cart.map((cake, index) => (
                         <li key={index} className="flex items-center gap-4 mb-4">
@@ -20,6 +21,7 @@ const Cart = () => {
                     ))}
                 </ul>
                 <Link to={isLoggedIn ? "/payment" : "#"} className={`link mt-3 text-center block ${cart.length === 0 ? "pointer-events-none opacity-50" : ""}`}>
+
                     <button 
                         className="bg-blue-500 text-white rounded mt-5" 
                         disabled={cart.length === 0} 
@@ -32,6 +34,7 @@ const Cart = () => {
                         {t("checkout")}
                     </button>
                 </Link>
+                <div className="przerwa"></div>
                 <Link to="/cakes" className="link mt-3 text-center block">{t("backToCakes")}</Link>
             </div>
         </div>

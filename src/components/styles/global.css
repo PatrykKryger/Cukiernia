@@ -1,16 +1,58 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+html{
+    height: 100%;
+}
+html, body {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* wyrównanie do góry */
+    background-color: #f4f4f9; /* domyślnie jasny motyw */
 }
 
+body.light {
+    background-color: #f4f4f9;
+}
+
+body.dark {
+    background-color: #121212;
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* poziomo */
+    align-items: center;
+}
+
+.app {
+    min-height: 100%;
+    display: flex;
+    justify-content: center; /* Centrowanie poziome */
+    align-items: center;     /* Centrowanie pionowe */
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Jasny motyw */
+.app.light {
+    background-color: #f4f4f9;
+    color: #000;
+}
+
+/* Ciemny motyw */
+.app.dark {
+    background-color: #121212;
+    color: #fff;
+}
 button,
 input {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 12px;
-    width: 100%;
+    width: 90%;
 }
 
 button {
@@ -53,6 +95,11 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.border mb-3{
+    text-align: center;
+    width: 90%;
 }
 
 .app.dark .card {
@@ -111,7 +158,7 @@ li span {
 }
 
 .w-full {
-    width: 100%;
+    padding: 10px;
 }
 
 .cake-image {
@@ -268,6 +315,13 @@ footer.footer .reviews-container {
 
 .przerwa {
     height: 20px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 27px;
+}
+.przerwa2{
+    height: 10px;
+    width: 100%;
 }
 
 .grid {

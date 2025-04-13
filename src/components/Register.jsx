@@ -25,6 +25,7 @@ const Register = () => {
                 <input type="password" placeholder="Password" className="border mb-3" value={password} onChange={(e) => setPassword(e.target.value)} />
                 {success && <p className="text-green-500">Registration successful!</p>}
                 <button className="bg-blue-500 text-white rounded mt-3" onClick={handleRegister}>Register</button>
+                <br/>
                 <Link to="/login" className="link mt-3 block">Already have an account? Login</Link>
             </div>
         </div>

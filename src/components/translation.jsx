@@ -21,7 +21,21 @@ const translations = {
         goToCart: "Przejdź do koszyka",
         username: "Nazwa użytkownika",
         password: "Hasło",
-        register: "Zarejestruj się"
+        register: "Zarejestruj się",
+        loginRequired: "Musisz się zalogować",
+        welcomeTitle: "Witamy w naszej Cukierni!",
+        welcomeDesc: "Nasza cukiernia to miejsce, gdzie pasja do pieczenia łączy się z najlepszymi składnikami. Każdy wypiek to wyjątkowa historia smaku!",
+        customerReviews: "Opinie naszych klientów",
+        seeOurCakes: "Zobacz Nasze Wypieki",
+        footerCustomerReviews: "Co mówią o nas klienci?",
+        createCakeTitle: "Stwórz ciasto",
+        cakeName: "Nazwa ciasta",
+        ingredients: "Składniki",
+        enterCakeName: "Wpisz nazwę ciasta",
+        listIngredients: "Wypisz składniki",
+        submit: "Zatwierdź",
+        cakeAdded: "Ciasto dodane do koszyka!",
+        fillAllFields: "Proszę wypełnić wszystkie pola.",
     },
     en: {
         login: "Login",
@@ -45,8 +59,23 @@ const translations = {
         goToCart: "Go to Cart",
         username: "Username",
         password: "Password",
-        register: "Register"
+        register: "Register",
+        loginRequired: "You must be logged in",
+        welcomeTitle: "Welcome to our Pastry Shop!",
+        welcomeDesc: "Our pastry shop is where a passion for baking meets the best ingredients. Each cake is a unique taste story!",
+        customerReviews: "Customer Reviews",
+        seeOurCakes: "See Our Cakes",
+        footerCustomerReviews: "What do our customers say?",
+        createCakeTitle: "Create Cake",
+        cakeName: "Cake Name",
+        ingredients: "Ingredients",
+        enterCakeName: "Enter cake name",
+        listIngredients: "List the ingredients",
+        submit: "Submit",
+        cakeAdded: "Cake added to cart!",
+        fillAllFields: "Please fill in all fields.",
     }
 };
 
 export default translations;
+
