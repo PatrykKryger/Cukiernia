@@ -9,11 +9,11 @@ const Register = () => {
     const [success, setSuccess] = useState(false);
 
     const handleRegister = () => {
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        const newUser = { username, password };
-        users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users));
-        setSuccess(true);
+        const users = JSON.parse(localStorage.getItem("users")) || []; // Pobierz istniejących użytkowników z localStorage
+        const newUser = { username, password }; // Utwórz nowego użytkownika
+        users.push(newUser); // Dodaj nowego użytkownika do listy
+        localStorage.setItem("users", JSON.stringify(users)); // Zapisz listę użytkowników w localStorage
+        setSuccess(true); // Ustaw komunikat o sukcesie
     };
 
     return (
