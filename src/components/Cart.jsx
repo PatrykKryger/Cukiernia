@@ -15,7 +15,7 @@ const Cart = () => {
                 <ul>
                     {cart.map((cake, index) => (
                         <li key={index} className="flex items-center gap-4 mb-4">
-                            <span>{cake.name}</span>
+                            <span className="cake-name">{cake.name}</span>
                             <button className="bg-red-500 text-white rounded" onClick={() => removeFromCart(cake.name)}>{t("remove")}</button>
                         </li>
                     ))}
@@ -42,4 +42,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
 

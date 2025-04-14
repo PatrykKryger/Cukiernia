@@ -168,6 +168,14 @@ li span {
     border-radius: 8px;
 }
 
+.cake-name {
+    color: black;
+}
+
+body.dark-theme .cake-name {
+    color: white;
+}
+
 .btn {
     background-color: red;
     color: white;
@@ -328,4 +336,5 @@ footer.footer .reviews-container {
     display: grid;
     gap: 20px;
 }
+
 
